@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>01-why-you-cant-stop-scrolling.mmd</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mermaid {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .title {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .instructions {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      max-width: 800px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">01 WHY YOU CANT STOP SCROLLING</div>
+  <div class="mermaid">
+graph TD
+    A["You: \"Just 5 minutes before bed\""] --> B[Open X/Twitter]
+    B --> C{"Algorithm detects<br/>your emotional state"}
+    C -->|Sad/Anxious| D["Serves comfort content<br/>\"You're not alone\" posts"]
+    C -->|Happy| E["Serves rage-bait<br/>to get you angry"]
+    C -->|Bored| F["Serves controversial takes<br/>\"Hot takes you won't believe\""]
+
+    D --> G{"Variable Reward:<br/>Will this post resonate?"}
+    E --> G
+    F --> G
+
+    G -->|NOPE| H["Quick scroll<br/>\"Waste of time\""]
+    G -->|MAYBE| I["Slow scroll<br/>\"Hmm, interesting\""]
+    G -->|HOLY SHIT| J["Complete stop<br/>\"I MUST COMMENT\""]
+
+    H --> K["Dopamine hit: \"Saved 2 seconds\""]
+    I --> L["Dopamine hit: \"Learned something\""]
+    J --> M["Dopamine hit: \"Found my people!\""]
+
+    K --> N["\"One more won't hurt\""]
+    L --> N
+    M --> N
+
+    N --> O["3 hours later<br/>\"How is it 3 AM?\""]
+    O --> P["Algorithm victory dance:<br/>\"Gotcha again, human\""]
+  </div>
+  <div class="instructions">
+    <h3>How to save as PNG:</h3>
+    <p>1. Right-click on the diagram above</p>
+    <p>2. Select "Save image as..." or take a screenshot</p>
+    <p>3. Save as high-resolution PNG (1080x1080 recommended for social media)</p>
+    <p>4. Use online tools like TinyPNG to optimize if needed</p>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        background: '#ffffff',
+        primaryColor: '#007bff',
+        primaryTextColor: '#333333',
+        primaryBorderColor: '#0056b3',
+        lineColor: '#666666',
+        secondaryColor: '#f8f9fa',
+        tertiaryColor: '#e9ecef'
+      }
+    });
+  </script>
+</body>
+</html>

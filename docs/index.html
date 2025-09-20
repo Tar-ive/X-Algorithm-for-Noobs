@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Algorithm Flowcharts - Viral Content Decoded</title>
+    <meta name="description" content="Hilarious flowcharts that break down how social media algorithms work. From Twitter's viral mechanics to your attention span - we make complex tech relatable and shareable!">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="X Algorithm Flowcharts - Viral Content Decoded">
+    <meta property="og:description" content="Hilarious flowcharts that expose how social media algorithms manipulate your attention. Finally understand why you scroll endlessly!">
+    <meta property="og:image" content="https://tar-ive.github.io/X-Algorithm-for-Noobs/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://tar-ive.github.io/X-Algorithm-for-Noobs/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="X Algorithm Flowcharts - Viral Content Decoded">
+    <meta name="twitter:description" content="Hilarious flowcharts exposing social media algorithms. Your daily doomscrolling explained!">
+    <meta name="twitter:image" content="https://tar-ive.github.io/X-Algorithm-for-Noobs/assets/images/og-image.jpg">
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Flowcharts Section */
+        .flowcharts {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .flowchart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .flowchart-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .flowchart-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .flowchart-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .flowchart-content {
+            padding: 30px;
+        }
+
+        .flowchart-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .flowchart-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .flowchart-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            color: #666;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .flowchart-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .view-flowchart {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .view-flowchart:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        .flowchart-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+        }
+
+        .flowchart-preview i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .flowchart-type {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .mermaid-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            color: white;
+            text-align: center;
+        }
+
+        .mermaid-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .mermaid-placeholder p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .mermaid-placeholder small {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Featured Flowchart */
+        .featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            margin: 60px 0;
+            border-radius: 20px;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .featured-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .featured-text p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .featured-image {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #000;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 500px;
+            margin: 30px auto 0;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+
+        .newsletter-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .featured-content {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>X Algorithm Flowcharts</h1>
+            <p>Where complex tech meets hilarious relatability. We break down how social media algorithms hack your brain - one flowchart at a time.</p>
+            <a href="#flowcharts" class="cta-button">Explore Flowcharts</a>
+        </div>
+    </header>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Making Tech Relatable Since 2024</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">500K+</span>
+                    <span class="stat-label">Views</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number share-count">50K+</span>
+                    <span class="stat-label">Shares</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">25K+</span>
+                    <span class="stat-label">Laughs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Flowcharts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Flowchart -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-text">
+                    <h2>Why You Can't Stop Scrolling</h2>
+                    <p>The hilarious truth about Twitter's algorithm that explains your 3-hour doomscrolling sessions. It's not you, it's the variable rewards!</p>
+                    <a href="#flowcharts" class="cta-button" style="background: white; color: #667eea;">See All Flowcharts</a>
+                </div>
+                <div class="featured-image">
+                    <div class="mermaid-placeholder">
+                        <i class="fas fa-brain"></i>
+                        <p>Interactive Flowchart</p>
+                        <small>Why You Can't Stop Scrolling</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flowcharts Section -->
+    <section id="flowcharts" class="flowcharts">
+        <div class="container">
+            <h2 class="section-title">Viral Flowcharts That Hit Too Close to Home</h2>
+
+            <div class="flowchart-grid">
+                <!-- Flowchart 1: Why You Can't Stop Scrolling -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="flowchart-preview">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span class="flowchart-type">Skinner Box</span>
+                        </div>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">Why You Can't Stop Scrolling</h3>
+                        <p class="flowchart-description">The algorithmic variable reward system that turns you into a dopamine-seeking scroll machine. It's not addiction, it's science!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Variable Rewards</span>
+                            <span class="tag">Dopamine</span>
+                            <span class="tag">Skinner Box</span>
+                        </div>
+                        <div class="flowchart-actions">
+                            <a href="../images/01-why-you-cant-stop-scrolling.html" class="view-flowchart" target="_blank">
+                                <i class="fas fa-eye"></i> View Flowchart
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" title="Share on Twitter" data-title="Why You Can't Stop Scrolling - The algorithm isn't magic, it's psychological warfare">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Share on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart 2: How Content Becomes Viral -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="flowchart-preview">
+                            <i class="fas fa-fire"></i>
+                            <span class="flowchart-type">Algorithm</span>
+                        </div>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">How Content Becomes Viral</h3>
+                        <p class="flowchart-description">Quote-to-click ratios and engagement hacking strategies that the algorithm loves. Virality isn't about quality, it's about emotional manipulation!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Viral Mechanics</span>
+                            <span class="tag">Engagement</span>
+                            <span class="tag">Algorithm</span>
+                        </div>
+                        <div class="flowchart-actions">
+                            <a href="../images/02-how-content-becomes-viral.html" class="view-flowchart" target="_blank">
+                                <i class="fas fa-eye"></i> View Flowchart
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" title="Share on Twitter" data-title="How Content Becomes Viral - The algorithmic manipulation behind engagement">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Share on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart 3: Your Attention Economy Survival Guide -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="flowchart-preview">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="flowchart-type">Survival</span>
+                        </div>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">Your Attention Economy Survival Guide</h3>
+                        <p class="flowchart-description">Psychological manipulation countermeasures and survival tactics for the digital age. Fight back against the attention economy!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Mental Health</span>
+                            <span class="tag">Defense</span>
+                            <span class="tag">Tactics</span>
+                        </div>
+                        <div class="flowchart-actions">
+                            <a href="../images/03-attention-economy-survival-guide.html" class="view-flowchart" target="_blank">
+                                <i class="fas fa-eye"></i> View Flowchart
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" title="Share on Twitter" data-title="Attention Economy Survival Guide - Fight back against psychological manipulation">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Share on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart 4: Twitter Algorithm Dating Simulator -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="flowchart-preview">
+                            <i class="fas fa-heart-broken"></i>
+                            <span class="flowchart-type">Toxic</span>
+                        </div>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">Twitter Algorithm Dating Simulator</h3>
+                        <p class="flowchart-description">Compare your relationship with the algorithm to a toxic dating scenario. The algorithm knows you better than your ex!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Relationship</span>
+                            <span class="tag">User Profiling</span>
+                            <span class="tag">Dark Patterns</span>
+                        </div>
+                        <div class="flowchart-actions">
+                            <a href="../images/04-twitter-algorithm-dating-simulator.html" class="view-flowchart" target="_blank">
+                                <i class="fas fa-eye"></i> View Flowchart
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" title="Share on Twitter" data-title="Twitter Algorithm Dating Simulator - When your relationship with AI gets toxic">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Share on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart 5: Social Media vs. Your Productivity -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <div class="flowchart-preview">
+                            <i class="fas fa-clock"></i>
+                            <span class="flowchart-type">Time</span>
+                        </div>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">Social Media vs. Your Productivity</h3>
+                        <p class="flowchart-description">Time displacement and focus stealing mechanisms that sabotage your productivity. 'Just 5 minutes' turns into 3 hours!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Productivity</span>
+                            <span class="tag">Time Theft</span>
+                            <span class="tag">Focus</span>
+                        </div>
+                        <div class="flowchart-actions">
+                            <a href="../images/05-social-media-vs-productivity.html" class="view-flowchart" target="_blank">
+                                <i class="fas fa-eye"></i> View Flowchart
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" title="Share on Twitter" data-title="Social Media vs Productivity - How algorithms steal your time">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Share on Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn" title="Copy Link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flowchart 6 -->
+                <div class="flowchart-card animate-in">
+                    <div class="flowchart-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="flowchart-content">
+                        <h3 class="flowchart-title">The Engagement Bait Pyramid</h3>
+                        <p class="flowchart-description">From humble tweets to viral content domination - the algorithmic hierarchy that determines your social media worth!</p>
+                        <div class="flowchart-tags">
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Growth</span>
+                            <span class="tag">Pyramid</span>
+                        </div>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn" title="Share on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="share-btn" title="Share on Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" class="share-btn" title="Copy Link">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How We Turn Complex Code Into Relatable Comedy</h2>
+            <div class="steps">
+                <div class="step animate-in">
+                    <div class="step-number">1</div>
+                    <h3>Decompile the Algorithm</h3>
+                    <p>We dive deep into Twitter's open-source code to understand exactly how the algorithm manipulates your behavior.</p>
+                </div>
+                <div class="step animate-in">
+                    <div class="step-number">2</div>
+                    <h3>Find the Absurdity</h3>
+                    <p>We identify the most ridiculous, manipulative, or downright funny aspects of the code and systems.</p>
+                </div>
+                <div class="step animate-in">
+                    <div class="step-number">3</div>
+                    <h3>Create Relatable Flowcharts</h3>
+                    <p>We translate complex technical concepts into hilarious, shareable flowcharts that hit close to home.</p>
+                </div>
+                <div class="step animate-in">
+                    <div class="step-number">4</div>
+                    <h3>Go Viral (Ironically)</h3>
+                    <p>Using the very algorithmic tricks we expose, we make our content shareable across social platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get Weekly Algorithm Exposés</h2>
+            <p>Join 50,000+ people who laugh at tech's attempts to control their attention</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email">
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Flowcharts</a>
+                <a href="#">Methodology</a>
+                <a href="#">Contact</a>
+                <a href="https://github.com/Tar-ive/X-Algorithm-for-Noobs">GitHub</a>
+            </div>
+            <p>&copy; 2024 X Algorithm Flowcharts. Making tech relatable, one flowchart at a time.</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9rem;">
+                Based on analysis of Twitter's open-source algorithm. Educational purposes only. 😉
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate-in elements
+        document.querySelectorAll('.animate-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Enhanced Share functionality
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = window.location.href;
+                const cardTitle = this.closest('.flowchart-card').querySelector('.flowchart-title').textContent;
+                const customTitle = this.getAttribute('data-title') || `${cardTitle} - X Algorithm Flowcharts`;
+                const shareText = `🧠 Just discovered: ${customTitle}\n\nThese flowcharts expose how social media algorithms manipulate your attention!\n\n`;
+
+                // Track share event
+                trackShare(this.closest('.flowchart-card').querySelector('.flowchart-title').textContent, this.querySelector('i').className);
+
+                if (this.querySelector('.fa-twitter')) {
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
+                } else if (this.querySelector('.fa-facebook')) {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(shareText)}`, '_blank');
+                } else if (this.querySelector('.fa-link')) {
+                    navigator.clipboard.writeText(`${shareText}\n${url}`);
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-link"></i>';
+                    }, 2000);
+                }
+            });
+        });
+
+        // Simple analytics tracking
+        function trackShare(contentTitle, platform) {
+            // Store in localStorage for basic analytics
+            const shares = JSON.parse(localStorage.getItem('flowchart_shares') || '{}');
+            const today = new Date().toISOString().split('T')[0];
+
+            if (!shares[today]) {
+                shares[today] = {};
+            }
+
+            if (!shares[today][contentTitle]) {
+                shares[today][contentTitle] = {};
+            }
+
+            const platformName = platform.includes('twitter') ? 'Twitter' :
+                                platform.includes('facebook') ? 'Facebook' : 'Link';
+
+            shares[today][contentTitle][platformName] = (shares[today][contentTitle][platformName] || 0) + 1;
+            localStorage.setItem('flowchart_shares', JSON.stringify(shares));
+
+            // Update UI feedback
+            updateShareCount();
+        }
+
+        function updateShareCount() {
+            const shares = JSON.parse(localStorage.getItem('flowchart_shares') || '{}');
+            let totalShares = 0;
+
+            Object.values(shares).forEach(day => {
+                Object.values(day).forEach(content => {
+                    Object.values(content).forEach(count => {
+                        totalShares += count;
+                    });
+                });
+            });
+
+            // Update social proof if element exists
+            const shareCount = document.querySelector('.share-count');
+            if (shareCount) {
+                shareCount.textContent = totalShares.toLocaleString();
+            }
+        }
+
+        // Initialize share count on load
+        updateShareCount();
+
+        // Add engagement tracking
+        document.querySelectorAll('.view-flowchart').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const title = this.closest('.flowchart-card').querySelector('.flowchart-title').textContent;
+                trackView(title);
+            });
+        });
+
+        function trackView(contentTitle) {
+            const views = JSON.parse(localStorage.getItem('flowchart_views') || '{}');
+            const today = new Date().toISOString().split('T')[0];
+
+            if (!views[today]) {
+                views[today] = {};
+            }
+
+            views[today][contentTitle] = (views[today][contentTitle] || 0) + 1;
+            localStorage.setItem('flowchart_views', JSON.stringify(views));
+        }
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            // Here you would integrate with your newsletter service
+            alert('Thanks for subscribing! Check your email for confirmation.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

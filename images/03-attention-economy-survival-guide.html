@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>03-attention-economy-survival-guide.mmd</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mermaid {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .title {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .instructions {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      max-width: 800px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">03 ATTENTION ECONOMY SURVIVAL GUIDE</div>
+  <div class="mermaid">
+graph TD
+    A[You wake up] --> B{"Algorithm already knows<br/>you're awake<br/>through app activity"}
+    B --> C["Sends notification:<br/>\"Someone mentioned you!\""]
+    C --> D{"Survival instinct check"}
+    D -->|FOMO wins| E["Grab phone immediately<br/>\"WHO MENTIONED ME?\""]
+    D -->|Willpower wins| F["\"I'll check later... maybe\""]
+
+    E --> G["It was just a bot<br/>mentioning you in a scam"]
+    G --> H{"Algorithm assessment"}
+    H -->"User engaged at 6:02 AM" --> I["You're now in the<br/>\"early riser\" cohort"]
+    I --> J["Gets served more<br/>\"productivity\" content"]
+    J --> K["3 hours of \"productivity\"<br/>tips later, it's 9 AM"]
+
+    F --> L["Algorithm:<br/>\"Interesting resistance\""]
+    L --> M{"Psychological Warfare"}
+    M --> N["\"Just one notification\"<br/>innocent ping"]
+    M --> O["\"Your friend posted something\"<br/>emotional manipulation"]
+    M --> P["\"Trending in your network\"<br/>fear of missing out"]
+
+    N --> Q["Check \"just one\""]
+    O --> Q
+    P --> Q
+
+    Q --> R["2 hours later:<br/>\"How did I get here?\""]
+    R --> S["Algorithm:<br/>\"All according to plan\""]
+
+    T["Countermeasures"] --> U["Delete app from phone"]
+    U --> V["Use browser only<br/>with strict time limits"]
+    V --> W["Turn off ALL notifications"]
+    W --> X["Block algorithmic content<br/>only follow chronological"]
+    X --> Y["Regain 847 hours per year<br/>of your life back"]
+  </div>
+  <div class="instructions">
+    <h3>How to save as PNG:</h3>
+    <p>1. Right-click on the diagram above</p>
+    <p>2. Select "Save image as..." or take a screenshot</p>
+    <p>3. Save as high-resolution PNG (1080x1080 recommended for social media)</p>
+    <p>4. Use online tools like TinyPNG to optimize if needed</p>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      themeVariables: {
+        background: '#ffffff',
+        primaryColor: '#007bff',
+        primaryTextColor: '#333333',
+        primaryBorderColor: '#0056b3',
+        lineColor: '#666666',
+        secondaryColor: '#f8f9fa',
+        tertiaryColor: '#e9ecef'
+      }
+    });
+  </script>
+</body>
+</html>

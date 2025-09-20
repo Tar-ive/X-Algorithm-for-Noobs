@@ -1,0 +1,40 @@
+graph TD
+    A["Your Account"] --> B{"Algorithm Personality Test"}
+    B --> C["\"What kind of content<br/>do you engage with?\""]
+    B --> D["\"When do you usually scroll?\""]
+    B --> E["\"How quickly do you reply?\""]
+    B --> F["\"What makes you angry?\""]
+
+    C --> G["Content preference profile"]
+    D --> H["Timing optimization"]
+    E --> I["Engagement speed score"]
+    F --> J["Rage-bait susceptibility"]
+
+    G --> K["Algorithm Matchmaker:<br/>\"Finding your perfect... content\""]
+    H --> K
+    I --> K
+    J --> K
+
+    K --> L{"First \"Date\" - Content Feed"}
+    L -->|"This is amazing!"| M["\"We're such a good match!\"<br/>Algorithm shows more of this"]
+    L -->|"This is terrible!"| N["\"Opposites attract?\"<br/>Algorithm shows you this MORE<br/>because your outrage is valuable"]
+
+    M --> O{"Relationship Deepening"}
+    O --> P["\"You like politics?<br/>Here's 47 political takes\""]
+    O --> Q["\"You enjoy cute animals?<br/>Have this entire feed of dogs\""]
+    O --> R["\"You're single?<br/>Here's dating advice forever\""]
+
+    N --> S{"Toxic Relationship"}
+    S --> T["\"You hate this topic?<br/>Let me show you MORE of it\""]
+    S --> U["\"This person annoys you?<br/>Here's their entire timeline\""]
+    S --> V["\"You think this is stupid?<br/>Let me prove you wrong\""]
+
+    P --> W["You're now in a<br/>\"political junkie\" bubble"]
+    Q --> X["You're now in a<br/>\"cute animal\" bubble"]
+    R --> Y["You're now in a<br/>\"forever alone\" bubble"]
+    T --> Z["You're now in a<br/>\"perpetually angry\" bubble"]
+
+    W --> AA["Algorithm:<br/>\"Perfect match! You'll never leave\""]
+    X --> AA
+    Y --> AA
+    Z --> AA
