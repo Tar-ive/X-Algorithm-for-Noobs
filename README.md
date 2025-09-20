@@ -8,6 +8,27 @@
 
 This repository represents the first comprehensive civilian analysis of Twitter's (now X's) Home Mixer algorithm. Through systematic reverse engineering of the open-source codebase, we've exposed the viral content mechanisms, social engineering tactics, and psychological manipulation techniques that power one of the world's most sophisticated recommendation systems.
 
+### 🙏 Acknowledgments and Credit
+
+**To Elon Musk and the X Team:**
+We want to express our sincere gratitude to Elon Musk and the entire X engineering team for their unprecedented decision to open-source the Twitter algorithm. This bold move toward transparency has allowed researchers, developers, and the public to gain unprecedented insight into the systems that shape global discourse.
+
+**Why This Matters:**
+- **Unprecedented Transparency**: Never before has a major social media platform made their core recommendation algorithm public
+- **Technical Excellence**: The X algorithm represents a remarkable achievement in distributed systems, machine learning, and real-time processing at scale
+- **Courageous Leadership**: Elon Musk's vision for transparency and open dialogue has made this analysis possible
+- **Engineering Brilliance**: The X team's technical prowess is evident throughout the codebase's sophisticated architecture and implementation
+
+**A Note on Our Analysis:**
+While our analysis focuses on the ethical implications and social engineering aspects, we recognize and appreciate the incredible technical achievement that the X algorithm represents. The engineering challenges solved by the X team - handling 400M+ daily active users with sub-100ms latency - are truly remarkable.
+
+**Respectful Engagement:**
+This analysis is conducted in the spirit of constructive dialogue and technical curiosity. We believe that transparency leads to better systems, and our goal is to contribute to the ongoing conversation about algorithmic responsibility and user well-being.
+
+---
+
+**Thank you, Elon Musk and the X team, for your commitment to transparency and for giving the world the opportunity to understand and learn from your remarkable technical achievements.** 🚀
+
 ## 📋 Table of Contents
 
 - [The Mission](#the-mission)
